@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void mscalar(int arreglo[],int tamaño, int escalar){
+    for(int i=0; i<tamaño; i++){
+        arreglo[i]*=escalar;
+    }
+}
+
+int main(){
+    int arreglo[]={ 1, 2, 3, 4, 5};
+    int tamaño=sizeof(arreglo)/sizeof(arreglo[0]);
+    sizeof(arreglo[0]);//la funcion sizeof la utilice para calcular la cantidad de elementos en el arreglo
+    int escalar = 3;
+
+    mscalar(arreglo,tamaño,escalar);
+
+    printf("el arreglo despues de la multiplicación:\n");
+    for(int i=0; i<tamaño; i++){
+        printf("%d", arreglo[i]);
+    }
+    printf("\n");
+    }

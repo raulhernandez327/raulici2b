@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int sumar_cuadrados (int n){
+    int suma=0, cuadrado;
+
+    for(int i = 1; i<=n;i++){
+        suma += i*i;
+        
+    }
+    
+    return suma;
+}
+
+int main(){
+    int n, resultado;
+    printf("ingresa un numero: ");
+    scanf("%d", &n);
+
+    if (n<=0){
+        printf("ingresar un numero.\n");
+        return 1;
+    }
+    resultado = sumar_cuadrados(n);
+
+    printf("la suma de los cuadrados %d numeros es: %d\n",n,resultado);
+}

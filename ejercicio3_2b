@@ -1,0 +1,20 @@
+ #include<stdio.h>
+
+ int suma_digitos(int numero){
+    int suma=0;
+    while (numero !=0){
+        suma += numero %10;
+        numero /=10;
+    }
+    return suma;
+ }
+
+ int main(){
+    int numero;
+
+    printf("introduce un numero entero: ");
+    scanf("%d", &numero);
+
+    int resultado = suma_digitos(numero);
+    printf("la suma de los digitos de %d es: %d\n", numero, resultado);
+ }

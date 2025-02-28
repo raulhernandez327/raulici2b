@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+float promedio(int arreglo[], int tamaño) {
+    int suma = 0;
+    for (int i = 0; i < tamaño; i++) {
+        suma += arreglo[i];
+    }
+    return (float)suma / tamaño;
+}
+
+int main() {
+    int arreglo[] = {10, 20, 30, 40, 50};
+    int tamaño = sizeof(arreglo) / sizeof(arreglo[0]);
+
+    float resultado = promedio(arreglo, tamaño);
+    printf("El promedio de los elementos del arreglo es: %.2f\n", resultado);
+
+    return 0;
+}
